@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codeBin | New         
+    </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/5.0.1/autosize.min.js" integrity="sha512-aBxhlAogg9r6Gtes+dsuqW6IQ4Ee0MtjexckbMNOVdxAfi5NSEd38BNEgFiaBWS6cl67r+8OImzxVKDdmswhnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <form action="/save" method="POST">
+        <%- include('_buttons.ejs') %> 
+    <div class="wrap">
+        <div class="numbers">
+            <p>0</p>
+        </div>
+        <div id="code-display">
+            <textarea spellcheck="false" autofocus name="code" id="code"><%= locals.code %> </textarea>
+        </div>
+    </div>
+</form>
+    <script>
+        let data=document.getElementById("code");
+        let num=document.querySelector('.numbers');
+        autosize(data);
+        const set=()=>{
+           let l=data.value.split("\n").length;
+           console.log(l);
+           let str="";
+           for(let i=0;i<l;i++){
+                str=str.concat(`<p>${i}</p>`)
+           }
+           console.log(str)
+           num.innerHTML=str;
+        }
+        data.addEventListener('input',set)
+        window.onload=()=>{
+            set();
+        };
+    </script>
+</body>
+</html>

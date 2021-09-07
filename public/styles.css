@@ -1,0 +1,94 @@
+:root{
+    --primary:#2b2b2b;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--primary);
+    color: white;
+}
+button{
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+textarea{
+    min-height: 99vh;
+}
+.wrap{
+    display: flex;
+    flex-direction: row;
+}
+.numbers{
+    color: white;
+    text-align: end;
+    padding: 0px .6rem;
+    border-right: 1px solid wheat;
+
+}
+pre{
+    margin: 0;
+    padding: 0%;
+}
+#code-display{
+    margin: 0 .6rem;
+    padding: 0%;
+    font-size: 1rem;
+    flex:1 1 auto;
+    word-wrap: none;
+}
+#code{
+    background-color: var(--primary);
+    min-width: 100%;
+    resize: none;
+    border: none;
+    color: white;
+}
+#code:hover,
+#code:focus{
+    border: none;
+    outline: none;
+}
+.header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    opacity: .2;
+    transition: opacity 300ms;
+}
+.header:hover{
+    opacity: 1;
+}
+.logo{
+    font-size: 2.5rem;
+}
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+}
+.icon{
+    fill: currentColor;
+    color: aqua;
+    transition: color 250ms;
+}
+.icon:hover{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.homepage{
+    font: 1rem monospace;
+    padding: 4rem 1rem;
+    opacity: .8;
+    color: rgb(0, 110, 255);
+}
+.homepage h2{
+    font-size: 2rem ;
+    margin: 1rem 0;
+}
+.homepage b{
+    font-size: 1.2rem;
+    color: rgb(255, 123, 0);
+    line-height: 2rem;
+}
