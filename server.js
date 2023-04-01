@@ -1,6 +1,8 @@
 const express =require('express');
 const app = express();
 const mongoose=require('mongoose');
+const dotenv = require('dotenv');
+dotenv.config()
 const PORT = process.env.PORT || 80;
 const MONGODBURL = process.env.MONGODB_URL || 'mongodb://localhost:27017/codebin';
 app.set('view-engine','ejs');
@@ -76,5 +78,5 @@ app.get("/:id",(req,res)=>{
     }
 })
 app.listen(PORT,()=>{
-    console.log("server Running");
+    console.log("Server Running on port " + PORT);
 })
